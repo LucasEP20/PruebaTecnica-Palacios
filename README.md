@@ -76,15 +76,18 @@ TWILIO_ACCOUNT_SID=tu_sid
 TWILIO_AUTH_TOKEN=tu_token
 TWILIO_PHONE_NUMBER=tu_numero_twilio
 ```
+### 📡 Endpoints de la API
 
-Método,Ruta,Descripción
-POST,/api/users,Crea un usuario en MySQL y MongoDB.
-GET,/api/users,Lista todos los usuarios de la base de datos.
-GET,/api/users/:id,Obtiene el detalle de un usuario por su ID.
-PUT,/api/users/:id,Actualiza datos y genera el historial de cambios.
-DELETE,/api/users/:id,Elimina al usuario de ambos sistemas.
-GET,/api/users/:id/historial,Consulta la bitácora de cambios en MongoDB.
-POST,/api/users/:id/notify,Envía una notificación SMS vía Twilio.
+| Método | Ruta | Descripción |
+| :--- | :--- | :--- |
+| **POST** | `/api/users` | Crea un nuevo usuario en **MySQL** y sincroniza con **MongoDB**. |
+| **GET** | `/api/users` | Lista todos los usuarios registrados en el sistema. |
+| **GET** | `/api/users/:id` | Obtiene el detalle completo de un usuario específico por su ID. |
+| **PUT** | `/api/users/:id` | Actualiza los datos y genera automáticamente el **historial de cambios**. |
+| **DELETE** | `/api/users/:id` | Elimina al usuario de ambos sistemas de base de datos. |
+| **GET** | `/api/users/:id/historial` | Consulta la bitácora de cambios y auditoría en **MongoDB**. |
+| **POST** | `/api/users/:id/notify` | Envía una notificación **SMS real** al usuario vía **Twilio**. |
+
 
 ## 6. Desafios y soluciones
 
