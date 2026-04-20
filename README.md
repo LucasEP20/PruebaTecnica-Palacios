@@ -86,7 +86,7 @@ DELETE,/api/users/:id,Elimina al usuario de ambos sistemas.
 GET,/api/users/:id/historial,Consulta la bitácora de cambios en MongoDB.
 POST,/api/users/:id/notify,Envía una notificación SMS vía Twilio.
 
-## 5. Desafios y soluciones
+## 6. Desafios y soluciones
 
 1. Sincronizacion de bases de datos: se implemento dentro de cada operacion inportante del sistema (escritura, lectura, etc) donde cada operacion en MYSQL es seguida por la creacion de documento en MongoDB. Si la operacion principal falla, el sistema lanza una excepcion evitando registros huerfanos
 
